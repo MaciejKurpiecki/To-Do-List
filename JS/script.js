@@ -6,7 +6,7 @@
         },
         {
             content: "test2",
-            ddone: true,
+            done: true,
         },
     ];
     const addNewTask = (newTaskContent) => {
@@ -15,12 +15,16 @@
         });
         render();
     };
+
     const render = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-            <li>
+            <li 
+            class="list__item${task.done ? " list__item--done" : ""}">
+            <button class="js-done">Zrobione?</button>
+            <button class="js-remove">Usuń</button>
             ${task.content}
             </li>`;
         }
