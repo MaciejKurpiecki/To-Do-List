@@ -15,7 +15,28 @@
         });
         render();
     };
+    const removeTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
+        render();
+    };
+    const toggleStatus = (taskIndex) => {
+        tasks[taskIndex].done = !tasks[taskIndex].done;
+        render();
+    };
 
+    const bindEvents = () => {
+        const removeButtons = document.querySelectorAll(".js-remove");
+
+        removeButtons.forEach((removeButton, index) => {
+            removeButton.addEventListener("click", () => { removeTask(index); })
+        });
+
+        const toggleStatusButtons = document.querySelectorAll(".js-done");
+
+        toggleStatusButtons.forEach((toggleStatusButton, index) => {
+            toggleStatusButton.addEventListener("click", () => { toggleStatus(index); })
+        });
+    };
     const render = () => {
         let htmlString = "";
 
@@ -29,6 +50,8 @@
             </li>`;
         }
         document.querySelector(".js-tasks").innerHTML = htmlString;
+
+        bindEvents();
     };
     const onFormSubmit = (event) => {
         event.preventDefault();
