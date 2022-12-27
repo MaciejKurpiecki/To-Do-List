@@ -44,10 +44,10 @@
             htmlString += `
             <li 
             class="list__item${task.done ? " list__item--done" : ""}">
-            <button class="js-done list__doneButton${task.done ? " list__doneButton--done" : ""}"></button>           
+            <button class="js-done list__doneButton${task.done ? " list__doneButton--done" : ""}"></button> 
+            <button class="js-remove list__removeButton"></button>          
             <span class="list__task">${task.content}</span>
-            <button class="js-remove list__removeButton"></button>
-            </li>`;
+                        </li>`;
         }
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
@@ -63,10 +63,11 @@
         addNewTask(newTaskContent);
     };
     const init = () => {
-        render();
 
         const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
+        
+        render();
     };
     init();
 }
