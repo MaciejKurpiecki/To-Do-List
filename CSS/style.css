@@ -9,7 +9,9 @@ html {
 }
 .body{
     font-family: 'Lato', sans-serif;
-    margin: 5% 10%;
+    margin: 0 auto;
+    max-width: 1000px;
     background-color: whitesmoke;
     word-break: break-word;
+    padding: 20px;
    }

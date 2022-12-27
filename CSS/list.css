@@ -1,6 +1,11 @@
+.list__item {
+    list-style: none;
+}
+
 .list__item--done {
     text-decoration: line-through;
 }
+
 .list__removeButton {
     background-image: url(/images/delete.png);
     height: 25px;
@@ -8,13 +13,31 @@
     background-size: contain;
     border: none;
 }
-.list__doneButton{
+
+.list__doneButton {
     background-image: url(/images/check-box1.png);
     background-size: contain;
     width: 25px;
     height: 25px;
     border: none;
 }
-.list__doneButton--done{
+
+.list__doneButton--done {
     background-image: url(/images/check-box2.png);
+}
+
+.list__removeButton:hover {
+    border: 1px solid #ccc;
+}
+
+.list__removeButton:active {
+    border: 1px solid black;
+}
+
+.list__doneButton:hover {
+    border: 1px solid #ccc;
+}
+
+.list__doneButton:active {
+    border: 1px solid #000;
 }
