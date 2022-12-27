@@ -44,9 +44,9 @@
             htmlString += `
             <li 
             class="list__item${task.done ? " list__item--done" : ""}">
-            <button class="js-done list__doneButton${task.done ? " list__doneButton--done" : ""}"></button>
+            <button class="js-done list__doneButton${task.done ? " list__doneButton--done" : ""}"></button>           
+            <span class="list__task">${task.content}</span>
             <button class="js-remove list__removeButton"></button>
-            ${task.content}
             </li>`;
         }
         document.querySelector(".js-tasks").innerHTML = htmlString;
