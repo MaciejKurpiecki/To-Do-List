@@ -23,6 +23,11 @@
         tasks[taskIndex].done = !tasks[taskIndex].done;
         render();
     };
+    const resetInputField = () => {
+        const inputField = document.querySelector(".js-newTask");
+        inputField.value = '';
+        inputField.focus();
+    };
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -57,13 +62,12 @@
         event.preventDefault();
 
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
-        const inputField = document.querySelector(".js-newTask");
+
         if (newTaskContent === "") {
             return;
         }
         addNewTask(newTaskContent);
-        inputField.value = '';
-        inputField.focus();
+        resetInputField();
     };
     const init = () => {
 
