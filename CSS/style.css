@@ -10,4 +10,6 @@ html {
 .body{
     font-family: 'Lato', sans-serif;
     margin: 5% 10%;
+    background-color: whitesmoke;
+    word-break: break-word;
    }

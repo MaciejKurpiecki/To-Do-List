@@ -10,6 +10,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="/CSS/style.css" rel="stylesheet">
     <link href="/CSS/list.css" rel="stylesheet">
+    <link href="/CSS/form.css" rel="stylesheet">
+    <link href="/CSS/flex.css" rel="stylesheet">
     <script src="/JS/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,12 +24,20 @@
     <haeder>
         <h1>Lista zadań</h1>
     </haeder>
-    <form class="js-form">
-        <h2>Dodaj nowe zadanie</h2>
-        <input class="js-newTask">
-        <button>Dodaj zadanie</button>
-        <h2>Lista zadań</h2>
-        <ul class="js-tasks list"></ul>
+    <form class="js-form flex grid">
+        <div class="form__container">
+            <h2>Dodaj nowe zadanie</h2>
+        </div>
+        <div class="form__container form__container--margin"> <input class="js-newTask form__input" placeholder="Co jest do zrobienia?" autofocus>
+            <button class="form__addButton">Dodaj zadanie</button>
+        </div>
+        <div class="form__container">
+            <h2>Lista zadań</h2>
+        </div>
+        <div class="form__container">
+            <ul class="js-tasks list"></ul>
+        </div>
+
     </form>
 </body>
 
