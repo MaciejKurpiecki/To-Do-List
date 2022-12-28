@@ -7,11 +7,13 @@ html {
 ::before {
     box-sizing: inherit;
 }
-.body{
-    font-family: 'Lato', sans-serif;
+
+.body {
+    font-family: 'Arial', sans-serif;
     margin: 0 auto;
     max-width: 1000px;
-    background-color: whitesmoke;
+    background-color: #ebebeb;
     word-break: break-word;
     padding: 20px;
-   }
+    block-size: auto;
+}
