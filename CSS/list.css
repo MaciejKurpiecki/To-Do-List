@@ -22,6 +22,7 @@
 .list__task {
     flex-grow: 1;
     order: 2;
+    align-self: center;
 }
 
 .list__item--done {
@@ -31,8 +32,8 @@
 .list__removeButton {
     background-color: #ff0000;
     background-image: url(../images/bin.png);
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     background-size: cover;
     border: none;
     order: 3;
@@ -42,8 +43,8 @@
 
 .list__doneButton {
     background-color: green;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border: none;
     order: 1;
     align-self: center;
