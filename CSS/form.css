@@ -13,8 +13,7 @@
 .form__container--input {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    
+    flex-wrap: nowrap;
     margin-bottom: 2%;
 }
 
@@ -29,6 +28,21 @@
 
 .form__input {
     flex-grow: 1;
+    flex-shrink: 1;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 
 }
+
+@media (max-width:400px) {
+    .form__container--input {
+        flex-wrap: wrap;
+    }
+
+    .form__addButton {
+        flex-grow: 1;
+    }
+}
+
+;
