@@ -30,7 +30,7 @@
 
 .list__removeButton {
     background-color: #ff0000;
-    background-image: url(/images/bin.png);
+    background-image: url(../images/bin.png);
     height: 25px;
     width: 25px;
     background-size: cover;
@@ -51,7 +51,7 @@
 }
 
 .list__doneButton--done {
-    background-image: url(/images/true.png);
+    background-image: url(../images/true.png);
     background-size: contain;
 }
 
